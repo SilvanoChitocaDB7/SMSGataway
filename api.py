@@ -13,7 +13,9 @@ data = {
 
 #Cabeçalho da mensagem com as específicações do SMSGateway provider (Authorization, Content-Type)
 headers = {"Authorization" : "Token c570185f-ac81-4da1-a03f-85e85d5c8656","Content-Type":"application/json"}
+
+#Envio da requisição (Endpoint, header, Dados da mensagem no formato JSON)
 response = requests.post(url, headers=headers, json=json.dumps(data))
 
-# Codigo da resposta do servidor (200 para sucessso)
+# Codigo da resposta do servidor (201 para sucessso)
 print(response.status_code)
