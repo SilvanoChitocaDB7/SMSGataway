@@ -1,14 +1,19 @@
+#Biblioteca usada para criação e manipulação de JSON
 import json
+#Biblioteca usada para fazer requisições HTTP (deve ser instalada)
 import requests
 
-#Api endpoint
+#Api endpoint (o link que será usado para enviar as mensagens)
 url = "https://api.useombala.ao/v1/messages"
 
 #Mensagem
+# Data - Conteúdo da mensagem
+# from - Remetente(o teu número)
+# to - Destinatário (o número do destinatário da mensagem)
 data = {
 "message": "Mensagem de teste.",
-"from": "924680610",
-"to": "924680610",
+"from": "9XXXXXXXX",
+"to": "9XXXXXXXX",
 }
 
 #Cabeçalho da mensagem com as específicações do SMSGateway provider (Authorization, Content-Type)
